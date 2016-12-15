@@ -13,6 +13,8 @@ gem 'twitter', '~> 6.0'
 gem 'newrelic_rpm'
 gem 'unicorn'
 
+gem 'will_paginate'
+
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets

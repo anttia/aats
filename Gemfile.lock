@@ -196,6 +196,7 @@ GEM
     websocket-driver (0.6.4)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
+    will_paginate (3.1.5)
 
 PLATFORMS
   ruby
@@ -220,9 +221,7 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
   unicorn
   web-console
-
-RUBY VERSION
-   ruby 2.3.1p112
+  will_paginate
 
 BUNDLED WITH
    1.13.6
