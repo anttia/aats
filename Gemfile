@@ -11,6 +11,7 @@ gem "pg"
 gem 'twitter', '~> 6.0'
 
 gem 'newrelic_rpm'
+gem 'unicorn'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
