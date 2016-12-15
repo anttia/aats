@@ -5,5 +5,11 @@
   <%= @keyword.word %>
 </p>
 
+<ul>
+  <% @keyword.grab_tweets.each do |tweet| %>
+    <li> <%=tweet-%> </li>
+  <% end %>
+</ul>
+
 <%= link_to 'Edit', edit_keyword_path(@keyword) %> |
 <%= link_to 'Back', keywords_path %>
