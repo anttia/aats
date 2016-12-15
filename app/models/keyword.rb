@@ -1,6 +1,12 @@
 class Keyword < ApplicationRecord
   has_many :tweets
 
+  def self.grab_all_tweets()
+    Keyword.all.each do |keyword|
+      keyword.grab_tweets()
+    end
+  end
+
   def grab_tweets()
     client = Twitter::REST::Client.new do |config|
       config.consumer_key        = "7bsUWtyXhKuzitwtIa5cz7GXg"
@@ -17,7 +23,7 @@ class Keyword < ApplicationRecord
       new_tweet.user_uid = tweet.user.id
       new_tweet.user_name = tweet.user.name
       new_tweet.user_screen_name = tweet.user.screen_name
-      new_tweet.user_image_url = tweet.user.profile_image_url
+      new_tweet.user_image_url = tweet.user.profile_image_url.to_s
       new_tweet.keyword = self
       new_tweet.save
       "#{tweet.user.screen_name}: #{tweet.text}"
